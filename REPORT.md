@@ -15,7 +15,7 @@ Jax further uses a Just-In_Time (JIT) compiler to compile the high level Python 
 With XLA and JIT, we were able to implement a energy minimization simulation using the FIRE algorithm in just a few lines of Python code. Figure <> shows a rendered view of the initial and minimized systems.
 
 ![Initial System](plots/initial_system.png)
-![Minimized System](plots/minmized_system.png)
+![Minimized System](plots/minimized_system.png)
 
 ## Automatic Differentiation
 
@@ -34,5 +34,8 @@ V_cutoff = vanderwaals_cutoff(dr)
 F = -vmap(grad(vanderwaals))(dr)
 F_cutoff = -vmap(grad(vanderwaals_cutoff))(dr)
 ```
+
+![Vanderwaal's Potential Visualized](vanderwaals.png)
+![Automatic Gradients for Vanderwaal's Potential](vanderwaals_cutoff.png)
 
 While this is just a toy example, making our simulation fully differentiable means that we open up possibilities for future work like replacing/estimating the potential/force functions with a neural network, or automatically learning/optimizing simulation parameters without any additional solver libraries.
