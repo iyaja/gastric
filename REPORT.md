@@ -35,7 +35,7 @@ F = -vmap(grad(vanderwaals))(dr)
 F_cutoff = -vmap(grad(vanderwaals_cutoff))(dr)
 ```
 
-![Vanderwaal's Potential Visualized](vanderwaals.png)
-![Automatic Gradients for Vanderwaal's Potential](vanderwaals_cutoff.png)
+![Vanderwaal's Potential Visualized](plots/vanderwaals.png)
+![Automatic Gradients for Vanderwaal's Potential](plots/vanderwaals_cutoff.png)
 
 While this is just a toy example, making our simulation fully differentiable means that we open up possibilities for future work like replacing/estimating the potential/force functions with a neural network, or automatically learning/optimizing simulation parameters without any additional solver libraries.
