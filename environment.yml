@@ -1,0 +1,12 @@
+name: gastric
+channels:
+  - defaults
+dependencies:
+  - python
+  - jax
+  - jaxlib
+  - jax-md
+  - ca-certificates
+  - certifi
+  - openssl
+prefix: /home/iyaja/miniconda3/envs/gastric
